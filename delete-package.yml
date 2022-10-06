@@ -1,0 +1,11 @@
+--- # s/w deletion 
+- hosts: webservers
+  user: ansible
+  connection: ssh
+  become: yes
+
+  tasks:
+    - name: remove  package from  hosts
+      yum:
+        name: docker 
+        state: absent

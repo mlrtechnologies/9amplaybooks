@@ -1,0 +1,14 @@
+--- # my vars section
+- hosts: all
+  user: ansible
+  connection: ssh
+  become: true
+
+  vars:
+    pkgname: tree
+  
+  tasks:
+    - name: install tree s/w on webservers
+      action: yum name=' {{pkgname}}' state=installed
+
+

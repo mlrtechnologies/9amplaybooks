@@ -1,0 +1,13 @@
+--- 
+- name: variables section
+  hosts: webservers
+  become: yes
+
+  vars:
+    user: lakshmi ravi teja
+
+  tasks:
+    - name: creating a user {{user}}
+      user:
+        name: "{{user}}"
+

@@ -1,0 +1,12 @@
+---
+- name: copying a file  to hosts
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: copying a file from from server to hosts 
+      copy: 
+       src: /home/ansible/index.html
+       dest: /home/ansible
+       owner: mlravi
+

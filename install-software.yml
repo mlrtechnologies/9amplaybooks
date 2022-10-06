@@ -1,0 +1,9 @@
+---
+- hosts: webservers
+
+
+  tasks:
+    - name: install s/w git 
+      yum:
+        name: git 
+        state: present 

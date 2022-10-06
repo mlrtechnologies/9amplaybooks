@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+   
+
+  tasks:
+    - name:  removing pkg
+      yum:
+         name: httpd
+         state: absent
+    - name: start service
+      service:
+         name: httpd
+         state: absent
